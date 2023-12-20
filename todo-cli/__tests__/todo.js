@@ -75,39 +75,3 @@ describe("TodoList Test Suite", () => {
     expect(dueLaterThings[0].title).toBe("Due Later Todo");
   });
 });
-    const allOverDueThings = todo.overdue();
-
-    expect(allOverDueThings.length).toBe(1);
-    expect(allOverDueThings[0].title).toBe("Overdue Todo");
-  });
-
-  test("Should retrieve due today items which are mentioned", () => {
-    const todayDate = new Date().toISOString().split("T")[0];
-
-    todo.add({
-      title: "Due Today Todo",
-      completed: false,
-      dueDate: todayDate,
-    });
-
-    const todayDueThings = todo.dueToday();
-
-    expect(todayDueThings.length).toBe(1);
-    expect(todayDueThings[0].title).toBe("Due Today Todo");
-  });
-
-  test("Should retrieve due later items", () => {
-    
-
-    todo.add({
-      title: "Due Later Todo",
-      completed: false,
-      dueDate: "2023-12-31",
-    });
-
-    const dueLaterThings = todo.dueLater();
-
-    expect(dueLaterThings.length).toBe(1);
-    expect(dueLaterThings[0].title).toBe("Due Later Todo");
-  });
-});

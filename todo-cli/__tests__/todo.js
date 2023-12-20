@@ -20,7 +20,7 @@ describe("TodoList Test Suite", () => {
 
   test("Should mark a todo as completed after its completion", () => {
     todo.add({
-      title: "Incompleted Todo",
+      title: "Incomplete Todo",
       completed: false,
       dueDate: "2023-12-31",
     });
@@ -34,7 +34,7 @@ describe("TodoList Test Suite", () => {
     
 
     todo.add({
-      title: "Overdued Todo",
+      title: "Overdue Todo",
       completed: false,
       dueDate: "2023-01-01",
     });
